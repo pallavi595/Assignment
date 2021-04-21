@@ -1,0 +1,241 @@
+1.what is the diff bet c++ and java?
+Ans-C++ is platform-dependent, Java is platform-independent.
+C++ is mainly used for system programming, Java is mainly used for application programming. 
+c++ uses compiler, Java uses compiler and interpreter both.
+C++ supports operator overloading, Java doesn't support operator overloading.
+=================================================================================================
+2.What are the key features of java?
+Ans-1) Simple.  
+2) Object Oriented. 
+3) Robust. 
+4) Platform Independent. 
+5) Secure. 
+6) Multi Threading. 
+7) Architectural Neutral. 
+8) Portable.
+=================================================================================================
+3.what is JVM?
+Ans-JVM is a java virtual machine.
+-It mainly responsible to make java language platform independent.
+-JVM can run the byte code file to machine level and execute the program.
+-JVM helps in execution of the program and identify the error.
+=================================================================================================
+4.what is oops?why it called as object oriented?
+Ans-Object oriented programming is a method of implementation in which programs are organized as collections of objects and oops works on four major pillars abstraction, encapsulation, polymorphism,
+inheritance etc.
+=================================================================================================
+
+5.what is multiple example?Explain in real time in programatic way?
+Ans-Multiple Inheritance is a type of inheritance, where a class can inherit properties of more than one parent class. The problem occurs when there exist methods with same signature in both the super classes and subclass.
+
+Real time ex:
+Parents are a good example of multiple inheritance. Each child has two parents—that’s just the way it is. So it makes sense that you can design classes by using multiple inheritance. 
+=================================================================================================
+
+6.Diff bet abstract class and interface?
+Ans-Interface can have only abstract methods, abstract class have absract method and non abstract methods.
+-Interface supports multiple inheritance, abstract class dosent support multiple inheritance.
+-Interface has only the static and final variables, abstract class can have final,non final,static and non static variable.
+=================================================================================================
+
+7.what is encapsulation ? explain real time example?
+Ans-Binding the data member and member function code toghether is called as encapsulation.
+Real time ex:
+School bag is one of the most real examples of Encapsulation. School bag can keep our books, pens, etc.
+=================================================================================================
+
+8.what is polymorphism and inheritance?
+Ans-
+Polymorphism-One interface having multiple forms called as polymorphism.
+-There are two types of polymorphism 
+ 1)compile time polymorphism
+ 2)run time polymorphism
+
+Inheritance-Inheritance is the process of accquiring the properties of parent class from child class.
+-Inheritance is used for the reusability. 
+=================================================================================================
+
+9.what is method overriding and method overloading?Explain with program?
+Ans-
+Method overriding-If we have create a multiple function with same name and same arguments then it is reffered as method overriding.
+ex:
+class Animal{  
+void eat()
+{
+   System.out.println("eating...");
+}  
+}  
+class Dog extends Animal{  
+void eat()
+{
+   System.out.println("eating bread...");
+}  
+}  
+
+Method overloading-If we have create a multiple function with same name and different arguments then it is reffered as method overloading.
+ex:
+class OverloadingExample{  
+static int sum(int x,int y){return x+y;}  
+static int sum(int x,int y,int z){return x+y+z;}  
+}  
+=================================================================================================
+
+10.what is collection?what's its need? if we are having array?
+Ans- A collection is an object that represents a group of objects.
+-A collections framework is a unified architecture for representing and manipulating collections, enabling collections to be manipulated independently of implementation details.
+-The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+-Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+-Homogeneous : Arrays elements are homogeneous, it means once we created array we can store same type of elements.
+-For example in point 4 student array allow to store only String type elements, because the array type is String.
+=================================================================================================
+
+
+11.diffrence between array and arraylist? any programmetical difference?
+Ans-Array is a fixed length data structure whereas ArrayList is a variable length Collection class. 
+-We cannot change length of array once created in Java but ArrayList can be changed. 
+-We cannot store primitives in ArrayList, it can only store objects. 
+But array can contain both primitives and objects in Java.
+
+any programmetical difference
+Ans-ArrayList is a class that carries all the properties of a normal class;
+-we can create objects from it and call methods with the object.
+-While an Array is an object in Java but there is no method that we can call using this object. 
+-An array just has a single attribute called length that too is constant
+=================================================================================================
+
+12.Difference between list and arraylist 
+Ans- ArrayList class is used to create a dynamic array that contains objects. 
+-List interface creates a collection of elements that are stored in a sequence and they are identified and accessed using the index.
+-ArrayList creates an array of objects where the array can grow dynamically.
+=================================================================================================
+
+13.Explain Exception handling and how it is handled?
+Ans-Exception handling ensures that the flow of the program doesn't break when an exception occurs. 
+-For example, if a program has bunch of statements and an exception occurs mid way after executing certain statements then the statements after the exception will not execute and the program will terminate abruptly.
+
+-java exception handling is managed via five keywords: try, catch, throw, throws, and finally.
+-Any exception that is thrown out of a method must be specified as such by a throws clause. 
+-Any code that absolutely must be executed after a try block completes is put in a finally block.
+=================================================================================================
+
+14.What is garbage collection?
+Ans-Java applications obtain objects in memory as needed. 
+-It is the task of garbage collection (GC) in the Java virtual machine (JVM) to automatically determine what memory is no longer being used by a Java application and to recycle this memory for other uses.
+
+=================================================================================================
+
+15.Explain Public static void main()?
+Ans-Public- it is access specifier from anywhere we can access it.
+Static- it is access modifier we can call the methods directly by class name without creating its objects 
+Void- it is the return type Main- it is a method name.
+String[]args- in java we accept only the string type of argument and store it.
+=================================================================================================
+
+16.write a program to concat two arraylist if we are having first arraylist of 5 students firstname and then second arraylist of having five student lastname.then how we can concat first student firstname and lastname and others also.
+import java.util.ArrayList;
+public class stud
+{
+    public static void main(String [] args)
+    {
+        
+        ArrayList<String> arraylist1=new ArrayList<String>();
+        arraylist1.add("AL1: Manish");
+        arraylist1.add("AL1: shubham");
+        arraylist1.add("AL1: abhishek");
+	arraylist1.add("AL1: shyam");
+	arraylist1.add("AL1: amit");
+
+       
+        ArrayList<String> arraylist2=new ArrayList<String>();
+        arraylist2.add("AL2: patil");
+        arraylist2.add("AL2: badhe");
+        arraylist2.add("AL2: patil");
+	arraylist2.add("AL2: patil");
+	arraylist2.add("AL2: gade");
+
+        
+        ArrayList<String> al= new ArrayList<String>();
+        al.addAll(arraylist1);
+        al.addAll(arraylist2);
+
+        for(String temp: al){
+            System.out.println(temp);
+        }
+    }
+}
+=================================================================================================
+
+17.Write a program to reverse a String contents.
+class ReverseofaString
+{
+	public static void main(String[] arg)
+	{
+	ReverseofaString rev=new ReverseofaString();
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a string : ");
+	String  str=sc.nextLine();	
+	System.out.println("Reverse of a String  is : "+rev.reverse(str));
+	}
+static String reverse(String s)
+	{
+	String rev="";
+	for(int j=s.length();j>0;--j)
+	{
+	rev=rev+(s.charAt(j-1)); 
+	}
+	return rev;
+	}
+}
+=================================================================================================
+
+18.write a program to check anagram of string.
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args) {
+    String str1 = "Manish";
+    String str2 = "shubham";
+    
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+
+    if(str1.length() == str2.length()) {
+
+      char[] charArray1 = str1.toCharArray();
+      char[] charArray2 = str2.toCharArray();
+
+      
+      Arrays.sort(charArray1);
+      Arrays.sort(charArray2);
+
+      
+      boolean result = Arrays.equals(charArray1, charArray2);
+
+      if(result) {
+        System.out.println(str1 + " and " + str2 + " are anagram.");
+      }
+      else {
+        System.out.println(str1 + " and " + str2 + " are not anagram.");
+      }
+    }
+    else {
+      System.out.println(str1 + " and " + str2 + " are not anagram.");
+    }
+  }
+}
+=================================================================================================
+
+19.Do you Know any versioning tool?explain it?
+ans-Git is a free, open source distributed Version Control System Tool designed to handle everything from small to very large projects with speed and efficiency. 
+-Git has the functionality, performance, security and flexibility that most teams and individual developers need.
+-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+-Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. 
+-For the examples in this book, you will use software source code as the files being version controlled, though in reality you can do this with nearly any type of file on a computer.
+=================================================================================================
+
+20.A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. 
+-REST stands for representational state transfer and was created by computer scientist Roy Fielding.
+-REST or RESTful APIs were designed to take advantage of existing protocols.
+-Data is not tied to resources or methods, so REST can handle multiple types of calls, return different -data formats and even change structurally with the correct implementation of hypermedia.
+=================================================================================================
+
